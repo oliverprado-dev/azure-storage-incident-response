@@ -1,0 +1,18 @@
+AppTraces
+| where TimeGenerated >= ago(1h)
+| where Message contains "storage_public_access_guard"
+| extend decision_log = parse_json(Message)
+| where tostring(decision_log.kind) == "storage_public_access_guard"
+| project TimeGenerated,
+    event_id = tostring(decision_log.event_id),
+    correlation_id = tostring(decision_log.correlation_id),
+    resource_id = tostring(decision_log.resource_id),
+    mode = tostring(decision_log.mode),
+    decision = tostring(decision_log.decision),
+    result = tostring(decision_log.result),
+    before = tobool(decision_log.before),
+    after = tobool(decision_log.after),
+    phase = tostring(decision_log.phase),
+    reason = tostring(decision_log.reason),
+    status_code = toint(decision_log.status_code)
+| order by TimeGenerated desc

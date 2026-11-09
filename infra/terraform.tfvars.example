@@ -1,0 +1,9 @@
+subscription_id = "00000000-0000-0000-0000-000000000000"
+location        = "westeurope"
+name_suffix     = "troque1234"
+
+# Altere após publicar e confirmar a indexação de GuardStorage.
+event_subscription_enabled = false
+
+# Ative explicitamente depois de verificar o dry-run.
+remediation_enabled = false

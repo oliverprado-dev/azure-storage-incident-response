@@ -1,0 +1,4 @@
+AzureDiagnostics
+| where TimeGenerated >= ago(1h)
+| where Category =~ "DeliveryFailures" and ResourceProvider =~ "MICROSOFT.EVENTGRID"
+| order by TimeGenerated desc

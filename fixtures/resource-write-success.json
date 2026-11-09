@@ -1,0 +1,20 @@
+[
+  {
+    "topic": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-asir-demo01",
+    "subject": "/subscriptions/00000000-0000-0000-0000-000000000001/resourcegroups/rg-asir-demo01/providers/Microsoft.Storage/storageAccounts/asirlabdemo01",
+    "eventType": "Microsoft.Resources.ResourceWriteSuccess",
+    "eventTime": "2026-01-08T12:00:00.1234567Z",
+    "id": "00000000-0000-4000-8000-000000000101",
+    "data": {
+      "correlationId": "00000000-0000-4000-8000-000000000201",
+      "resourceProvider": "Microsoft.Storage",
+      "resourceUri": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-asir-demo01/providers/Microsoft.Storage/storageAccounts/asirlabdemo01",
+      "operationName": "Microsoft.Storage/storageAccounts/write",
+      "status": "Succeeded",
+      "subscriptionId": "00000000-0000-0000-0000-000000000001",
+      "tenantId": "00000000-0000-0000-0000-000000000002"
+    },
+    "dataVersion": "2",
+    "metadataVersion": "1"
+  }
+]
