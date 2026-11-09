@@ -65,25 +65,6 @@ A cada pull request, o GitHub Actions executa testes Python, replay sintético, 
 | `scripts/` | Replay local, empacotamento e deploy da Function |
 | `docs/` | Arquitetura, roteiro Azure, consultas KQL, runbook e evidências de validação |
 | `.github/workflows/` | Pipeline de CI |
-
-## Publique no GitHub
-
-1. No GitHub, crie um repositório vazio chamado **azure-storage-incident-response**. Deixe as opções de inicialização com README, licença e `.gitignore` desmarcadas, pois o primeiro commit será enviado do seu computador. [Guia do GitHub](https://docs.github.com/en/get-started/git-basics/adding-locally-hosted-code-to-github)
-2. Extraia o ZIP e abra a pasta `azure-storage-incident-response` no terminal. Faça o primeiro commit.
-
-   ```bash
-   git init -b main
-   git add .
-   git diff --cached --stat
-   git commit -m "Add Azure Storage incident response lab"
-   ```
-
-3. Copie a URL HTTPS ou SSH do repositório vazio e cole quando solicitado. Depois, abra a aba **Actions** para acompanhar o primeiro CI.
-
-   ```bash
-   read -r -p 'URL do repositório GitHub: ' REPO_URL
-   git remote add origin "$REPO_URL"
-   git push -u origin main
    ```
 
 Veja [validação e evidências](docs/validation.md) para distinguir a execução local, a simulação e o que requer uma assinatura Azure.
